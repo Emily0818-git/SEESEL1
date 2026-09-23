@@ -1,0 +1,2462 @@
+/* =========================================================
+   CONTACTO SEESEL
+   Archivo exclusivo: contacto.css
+========================================================= */
+
+.contacto-page {
+    --contacto-lime: #8ee800;
+    --contacto-lime-light: #b4ff32;
+    --contacto-lime-dark: #65b900;
+
+    --contacto-navy: #00233f;
+    --contacto-navy-2: #003457;
+    --contacto-dark: #00182c;
+
+    --contacto-text: #071a30;
+    --contacto-gray: #657180;
+    --contacto-light: #f7f9fb;
+    --contacto-border: #e1e7ec;
+
+    --contacto-shadow:
+        0 18px 45px rgba(0, 35, 63, 0.10);
+
+    background: #fff;
+    color: var(--contacto-text);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.contacto-page *,
+.contacto-page *::before,
+.contacto-page *::after {
+    box-sizing: border-box;
+}
+
+.contacto-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.contacto-hero {
+    position: relative;
+    background: #fff;
+}
+
+.contacto-hero__content {
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 44% 56%;
+    align-items: stretch;
+}
+
+.contacto-hero__copy {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+        70px
+        clamp(35px, 5vw, 85px)
+        70px
+        max(40px, calc((100vw - 1180px) / 2));
+
+    background:
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(142, 232, 0, .07),
+            transparent 32%
+        ),
+        #fff;
+}
+
+.contacto-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 24px;
+
+    color: #4eaf00;
+
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.contacto-eyebrow span {
+    position: relative;
+
+    width: 48px;
+    height: 2px;
+
+    background: var(--contacto-lime);
+}
+
+.contacto-eyebrow span::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: -4px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--contacto-lime);
+    box-shadow:
+        0 0 8px var(--contacto-lime),
+        0 0 18px var(--contacto-lime);
+
+    transform: translateY(-50%);
+
+    animation: contactoPulse 1.8s infinite;
+}
+
+.contacto-hero h1 {
+    margin: 0 0 22px;
+
+    color: var(--contacto-text);
+
+    font-size: clamp(2.5rem, 4.4vw, 4.6rem);
+    line-height: .98;
+    letter-spacing: -.045em;
+    font-weight: 850;
+}
+
+.contacto-hero h1 span {
+    color: #54b612;
+}
+
+.contacto-hero__copy > p {
+    max-width: 520px;
+
+    margin: 0 0 28px;
+
+    color: #556170;
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.contacto-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.contacto-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 700;
+    color: var(--contacto-text);
+}
+
+.contacto-meta-item i {
+    color: #55b81a;
+    font-size: 1.25rem;
+}
+
+.contacto-hero__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.btn-contacto-principal {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 54px;
+    padding: 0 25px;
+
+    border: 1px solid rgba(142, 232, 0, .45);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00233f,
+            #003555
+        );
+
+    box-shadow:
+        0 12px 25px rgba(0, 35, 63, .22),
+        0 0 18px rgba(142, 232, 0, .12);
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: .82rem;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.btn-contacto-principal::before {
+    content: "";
+
+    position: absolute;
+    top: -50%;
+    left: -60%;
+
+    width: 40%;
+    height: 200%;
+
+    background: rgba(255, 255, 255, .32);
+
+    transform: rotate(25deg);
+
+    animation: contactoButtonShine 4s infinite;
+}
+
+.btn-contacto-principal:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 30px rgba(0, 35, 63, .25),
+        0 0 26px rgba(142, 232, 0, .28);
+
+    color: #fff;
+}
+
+.contacto-telefono-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--contacto-text);
+    text-decoration: none;
+}
+
+.contacto-telefono-hero i {
+    color: #4eaf00;
+    font-size: 1.25rem;
+}
+
+.contacto-telefono-hero strong {
+    font-size: 1.12rem;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.contacto-hero__visual {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 520px;
+
+    clip-path: polygon(
+        17% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    background: var(--contacto-navy);
+}
+
+.contacto-hero__visual::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, .98) 0%,
+            rgba(255, 255, 255, .38) 14%,
+            transparent 35%
+        );
+}
+
+.contacto-hero__visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        radial-gradient(
+            circle at 55% 55%,
+            transparent 45%,
+            rgba(0, 24, 44, .18)
+        );
+}
+
+.contacto-hero__visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+
+    display: block;
+    object-fit: cover;
+
+    animation: contactoHeroZoom 16s ease-in-out infinite alternate;
+}
+
+
+/* Líneas de energía */
+
+.contacto-energy {
+    position: absolute;
+    z-index: 4;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--contacto-lime),
+            rgba(142, 232, 0, .2),
+            transparent
+        );
+
+    filter:
+        drop-shadow(0 0 5px var(--contacto-lime));
+
+    transform-origin: center;
+
+    opacity: .8;
+}
+
+.contacto-energy-1 {
+    width: 440px;
+    left: 18%;
+    top: 50%;
+
+    transform: rotate(-14deg);
+
+    animation: contactoEnergy 5s infinite linear;
+}
+
+.contacto-energy-2 {
+    width: 520px;
+    right: -60px;
+    bottom: 20%;
+
+    transform: rotate(8deg);
+
+    animation: contactoEnergy 7s infinite linear reverse;
+}
+
+.contacto-energy-3 {
+    width: 360px;
+    left: 32%;
+    bottom: 8%;
+
+    transform: rotate(-6deg);
+
+    animation: contactoEnergy 6s infinite linear;
+}
+
+.contacto-spark {
+    position: absolute;
+    z-index: 5;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 5px #fff,
+        0 0 12px var(--contacto-lime),
+        0 0 30px var(--contacto-lime);
+
+    animation: contactoSpark 2.2s infinite ease-in-out;
+}
+
+.spark-1 {
+    left: 28%;
+    top: 52%;
+}
+
+.spark-2 {
+    left: 58%;
+    top: 63%;
+    animation-delay: .7s;
+}
+
+.spark-3 {
+    right: 16%;
+    bottom: 18%;
+    animation-delay: 1.2s;
+}
+
+.spark-4 {
+    right: 7%;
+    top: 40%;
+    animation-delay: 1.6s;
+}
+
+
+/* =========================================================
+   MAIN CONTACT
+========================================================= */
+
+.contacto-main {
+    position: relative;
+    z-index: 10;
+
+    padding: 38px 0 45px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff,
+            #fbfcfd
+        );
+}
+
+.contacto-main__grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CONTACTO DIRECTO
+========================================================= */
+
+.contacto-directo {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px 32px;
+
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(142, 232, 0, .08),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #00203b,
+            #003051
+        );
+
+    box-shadow: var(--contacto-shadow);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.contacto-directo::after {
+    content: "";
+
+    position: absolute;
+    right: -80px;
+    bottom: -80px;
+
+    width: 260px;
+    height: 260px;
+
+    border: 1px solid rgba(142, 232, 0, .15);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 20px rgba(142, 232, 0, .03),
+        0 0 0 45px rgba(142, 232, 0, .02);
+}
+
+.contacto-section-title h2 {
+    margin: 0;
+
+    font-size: 1.05rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+
+.contacto-section-title span {
+    display: block;
+
+    width: 42px;
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: var(--contacto-lime);
+    border-radius: 99px;
+}
+
+.contacto-section-title--light h2 {
+    color: white;
+}
+
+.contacto-info-list {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contacto-info-item {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.contacto-info-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(142, 232, 0, .75);
+    border-radius: 8px;
+
+    color: var(--contacto-lime);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.contacto-info-item:hover .contacto-info-icon {
+    transform: translateY(-3px);
+
+    background: rgba(142, 232, 0, .08);
+
+    box-shadow:
+        0 0 18px rgba(142, 232, 0, .22);
+}
+
+.contacto-info-item small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.contacto-info-item strong {
+    display: block;
+
+    color: var(--contacto-lime);
+
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.contacto-social {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 28px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.16);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacto-social > span {
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: .82rem;
+}
+
+.contacto-social__icons {
+    display: flex;
+    gap: 10px;
+}
+
+.contacto-social__icons a {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--contacto-lime);
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.contacto-social__icons a:hover {
+    background: var(--contacto-lime);
+    color: var(--contacto-navy);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.contacto-form-card {
+    padding: 34px;
+
+    border: 1px solid var(--contacto-border);
+    border-radius: 14px;
+
+    background: #fff;
+
+    box-shadow: var(--contacto-shadow);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .7s ease .08s,
+        transform .7s ease .08s;
+}
+
+.contacto-form {
+    margin-top: 24px;
+}
+
+.contacto-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.contacto-field {
+    margin-bottom: 14px;
+}
+
+.contacto-field label {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.contacto-field input,
+.contacto-field textarea,
+.contacto-field select {
+    width: 100%;
+
+    border: 1px solid #d9e0e7;
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: var(--contacto-text);
+
+    font-family: inherit;
+    font-size: .9rem;
+
+    outline: none;
+
+    transition:
+        border .25s ease,
+        box-shadow .25s ease;
+}
+
+.contacto-field input,
+.contacto-field select {
+    height: 50px;
+    padding: 0 15px;
+}
+
+.contacto-field textarea {
+    min-height: 125px;
+    resize: vertical;
+
+    padding: 14px 15px;
+}
+
+.contacto-field input:focus,
+.contacto-field textarea:focus,
+.contacto-field select:focus {
+    border-color: var(--contacto-lime-dark);
+
+    box-shadow:
+        0 0 0 3px rgba(142, 232, 0, .10);
+}
+
+.contacto-honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
+.btn-contacto-enviar {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4caf0e,
+            var(--contacto-lime),
+            #5cb900
+        );
+
+    color: white;
+
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 22px rgba(90, 180, 0, .22);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.btn-contacto-enviar::after {
+    content: "";
+
+    position: absolute;
+    top: -70%;
+    left: -25%;
+
+    width: 18%;
+    height: 240%;
+
+    background: rgba(255,255,255,.45);
+
+    transform: rotate(22deg);
+
+    animation: contactoFormShine 4.5s infinite;
+}
+
+.btn-contacto-enviar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(90, 180, 0, .30);
+}
+
+.contacto-privacy {
+    margin: 14px 0 0;
+
+    text-align: center;
+
+    color: #747f8d;
+
+    font-size: .73rem;
+}
+
+.contacto-privacy i {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   FRANJA DE CONFIANZA
+========================================================= */
+
+.contacto-trust {
+    padding: 0 0 60px;
+}
+
+.contacto-trust__grid {
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 23px 25px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #00203a,
+            #00385e,
+            #00203a
+        );
+
+    box-shadow: var(--contacto-shadow);
+}
+
+.contacto-trust__grid::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(142, 232, 0, .04),
+            transparent
+        );
+
+    animation: contactoTrustGlow 6s infinite linear;
+}
+
+.contacto-trust-item {
+    position: relative;
+    z-index: 2;
+
+    min-height: 80px;
+
+    padding: 6px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    border-right: 1px solid rgba(255,255,255,.28);
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+.contacto-trust-item:last-child {
+    border-right: 0;
+}
+
+.contacto-trust-item:nth-child(2) {
+    transition-delay: .08s;
+}
+
+.contacto-trust-item:nth-child(3) {
+    transition-delay: .16s;
+}
+
+.contacto-trust-item:nth-child(4) {
+    transition-delay: .24s;
+}
+
+.contacto-trust-icon {
+    color: var(--contacto-lime);
+    font-size: 2rem;
+}
+
+.contacto-trust-item strong,
+.contacto-trust-item span,
+.contacto-trust-item small {
+    display: block;
+}
+
+.contacto-trust-item strong {
+    color: var(--contacto-lime);
+
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.contacto-trust-item span {
+    color: white;
+
+    font-weight: 750;
+    font-size: .82rem;
+}
+
+.contacto-trust-item small {
+    margin-top: 3px;
+
+    color: rgba(255,255,255,.66);
+
+    font-size: .65rem;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.contacto-heading-center {
+    text-align: center;
+}
+
+.contacto-heading-center > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #51af09;
+
+    font-size: .75rem;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.contacto-heading-center h2 {
+    margin: 0;
+
+    color: var(--contacto-text);
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 850;
+    letter-spacing: -.035em;
+}
+
+.contacto-heading-center p {
+    margin: 7px auto 0;
+
+    color: #66717d;
+
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   DIRECTORIO
+========================================================= */
+
+.contacto-directorio {
+    position: relative;
+
+    padding: 20px 0 65px;
+}
+
+.contacto-directorio-grid {
+    position: relative;
+
+    margin-top: 28px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contacto-directorio-line {
+    position: absolute;
+    z-index: 0;
+
+    left: 9%;
+    right: 9%;
+    top: 49%;
+
+    height: 2px;
+
+    background:
+        rgba(142, 232, 0, .22);
+}
+
+.contacto-directorio-line span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--contacto-lime);
+
+    box-shadow:
+        0 0 12px var(--contacto-lime);
+
+    transform: translateY(-50%);
+
+    animation: contactoLineTravel 6s linear infinite;
+}
+
+.contacto-extension-card {
+    position: relative;
+    z-index: 2;
+
+    min-height: 210px;
+
+    padding: 24px 18px;
+
+    border: 1px solid #e5e9ed;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.96);
+
+    box-shadow:
+        0 12px 30px rgba(0, 35, 63, .08);
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .65s ease,
+        transform .65s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.contacto-extension-card:nth-of-type(3) {
+    transition-delay: .08s;
+}
+
+.contacto-extension-card:nth-of-type(4) {
+    transition-delay: .16s;
+}
+
+.contacto-extension-card:nth-of-type(5) {
+    transition-delay: .24s;
+}
+
+.contacto-extension-card:hover {
+    transform: translateY(-6px) !important;
+
+    border-color: rgba(142, 232, 0, .6);
+
+    box-shadow:
+        0 18px 38px rgba(0, 35, 63, .12),
+        0 0 18px rgba(142, 232, 0, .08);
+}
+
+.extension-icon {
+    margin-bottom: 12px;
+
+    color: #54b20d;
+
+    font-size: 1.75rem;
+}
+
+.contacto-extension-card h3 {
+    min-height: 46px;
+
+    margin: 0 0 10px;
+
+    color: var(--contacto-text);
+
+    font-size: .95rem;
+    font-weight: 850;
+}
+
+.contacto-extension-card strong {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #52af0f;
+
+    font-size: .9rem;
+}
+
+.contacto-extension-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 110px;
+    height: 38px;
+
+    justify-content: center;
+
+    border: 1px solid #7bcc43;
+    border-radius: 7px;
+
+    color: #285d20;
+    text-decoration: none;
+
+    font-size: .78rem;
+    font-weight: 700;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.contacto-extension-card a:hover {
+    background: var(--contacto-lime);
+    color: var(--contacto-navy);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.contacto-mapa {
+    padding: 15px 0 70px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff,
+            #f8fafc
+        );
+}
+
+.contacto-map-card {
+    position: relative;
+    overflow: hidden;
+
+    height: 310px;
+
+    margin-top: 28px;
+
+    border-radius: 14px 14px 0 0;
+
+    background: #edf2f5;
+
+    box-shadow: var(--contacto-shadow);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.contacto-map-card iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    filter:
+        saturate(.85)
+        contrast(.96);
+}
+
+.contacto-map-overlay {
+    position: absolute;
+    z-index: 5;
+
+    top: 25px;
+    left: 25px;
+
+    max-width: 280px;
+
+    padding: 20px;
+
+    display: flex;
+    gap: 14px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.96);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+
+    backdrop-filter: blur(8px);
+}
+
+.contacto-map-overlay > i {
+    margin-top: 2px;
+
+    color: #58b711;
+
+    font-size: 1.6rem;
+}
+
+.contacto-map-overlay strong {
+    color: var(--contacto-text);
+}
+
+.contacto-map-overlay p {
+    margin: 6px 0 10px;
+
+    color: #4e5965;
+
+    font-size: .78rem;
+    line-height: 1.6;
+}
+
+.contacto-map-overlay a {
+    color: #4bab0d;
+
+    text-decoration: none;
+
+    font-size: .77rem;
+    font-weight: 750;
+}
+
+.contacto-map-pulse {
+    position: absolute;
+    z-index: 5;
+
+    left: 52%;
+    top: 54%;
+
+    transform: translate(-50%, -50%);
+}
+
+.contacto-map-pulse i {
+    position: relative;
+    z-index: 3;
+
+    color: #69cc11;
+
+    font-size: 3rem;
+
+    filter:
+        drop-shadow(0 5px 8px rgba(72, 150, 0, .2));
+}
+
+.contacto-map-pulse span,
+.contacto-map-pulse::before,
+.contacto-map-pulse::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 55%;
+
+    width: 75px;
+    height: 35px;
+
+    border: 2px solid var(--contacto-lime);
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.3);
+
+    opacity: 0;
+
+    animation:
+        contactoMapPulse 2.8s infinite;
+}
+
+.contacto-map-pulse::before {
+    animation-delay: .7s;
+}
+
+.contacto-map-pulse::after {
+    animation-delay: 1.4s;
+}
+
+.contacto-map-footer {
+    min-height: 95px;
+
+    padding: 18px 28px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr auto;
+    align-items: center;
+    gap: 25px;
+
+    border-radius: 0 0 14px 14px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #00203a,
+            #00345a
+        );
+
+    color: white;
+}
+
+.contacto-map-footer > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: rgba(255,255,255,.9);
+
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+.contacto-map-footer i {
+    color: var(--contacto-lime);
+
+    font-size: 1.8rem;
+}
+
+.contacto-map-footer > a {
+    min-width: 180px;
+    min-height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid var(--contacto-lime);
+    border-radius: 8px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.contacto-map-footer > a i {
+    font-size: 1rem;
+}
+
+.contacto-map-footer > a:hover {
+    background: var(--contacto-lime);
+    color: var(--contacto-navy);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.contacto-whatsapp {
+    position: fixed;
+    z-index: 999;
+
+    right: 0;
+    top: 68%;
+
+    width: 58px;
+    min-height: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 8px;
+
+    border-radius: 14px 0 0 14px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #213c20,
+            #102e24
+        );
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.23),
+        0 0 14px rgba(142, 232, 0, .14);
+
+    color: white;
+    text-decoration: none;
+
+    transition:
+        width .3s ease,
+        background .3s ease;
+}
+
+.contacto-whatsapp i {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--contacto-lime);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    box-shadow:
+        0 0 16px rgba(142, 232, 0, .45);
+}
+
+.contacto-whatsapp span {
+    max-width: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    font-size: .7rem;
+    font-weight: 700;
+
+    opacity: 0;
+
+    transition:
+        max-width .3s ease,
+        opacity .3s ease;
+}
+
+.contacto-whatsapp:hover {
+    width: 155px;
+
+    flex-direction: row;
+}
+
+.contacto-whatsapp:hover span {
+    max-width: 90px;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ANIMACIONES DE ENTRADA
+========================================================= */
+
+.contacto-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes contactoPulse {
+
+    0%,
+    100% {
+        transform:
+            translateY(-50%)
+            scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translateY(-50%)
+            scale(1.5);
+        opacity: .55;
+    }
+
+}
+
+@keyframes contactoHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.055);
+    }
+
+}
+
+@keyframes contactoEnergy {
+
+    0% {
+        opacity: .2;
+        filter:
+            drop-shadow(0 0 2px var(--contacto-lime));
+    }
+
+    50% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 9px var(--contacto-lime));
+    }
+
+    100% {
+        opacity: .2;
+        filter:
+            drop-shadow(0 0 2px var(--contacto-lime));
+    }
+
+}
+
+@keyframes contactoSpark {
+
+    0%,
+    100% {
+        transform: scale(.6);
+        opacity: .4;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+
+}
+
+@keyframes contactoButtonShine {
+
+    0%,
+    72% {
+        left: -60%;
+    }
+
+    100% {
+        left: 140%;
+    }
+
+}
+
+@keyframes contactoFormShine {
+
+    0%,
+    75% {
+        left: -25%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+@keyframes contactoTrustGlow {
+
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+
+}
+
+@keyframes contactoLineTravel {
+
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% - 11px);
+    }
+
+}
+
+@keyframes contactoMapPulse {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(.25);
+
+        opacity: .8;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(2);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .contacto-hero__content {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-hero__copy {
+        padding:
+            60px
+            max(25px, calc((100vw - 720px) / 2));
+    }
+
+    .contacto-hero__visual {
+        min-height: 420px;
+
+        clip-path: none;
+    }
+
+    .contacto-hero__visual img {
+        min-height: 420px;
+    }
+
+    .contacto-main__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-trust-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .contacto-trust-item:nth-child(-n+2) {
+        border-bottom:
+            1px solid rgba(255,255,255,.2);
+    }
+
+    .contacto-directorio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-directorio-line {
+        display: none;
+    }
+
+    .contacto-map-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contacto-map-footer > a {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MÓVIL
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .contacto-container {
+        width: min(100% - 26px, 1180px);
+    }
+
+    .contacto-hero__copy {
+        padding: 45px 22px;
+    }
+
+    .contacto-hero h1 {
+        font-size: 2.55rem;
+    }
+
+    .contacto-hero__meta {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .contacto-hero__actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contacto-hero__visual {
+        min-height: 330px;
+    }
+
+    .contacto-hero__visual img {
+        min-height: 330px;
+    }
+
+    .contacto-form-card,
+    .contacto-directo {
+        padding: 27px 22px;
+    }
+
+    .contacto-form__row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contacto-trust__grid {
+        grid-template-columns: 1fr;
+        padding: 15px 20px;
+    }
+
+    .contacto-trust-item {
+        border-right: 0 !important;
+        border-bottom:
+            1px solid rgba(255,255,255,.18);
+
+        padding: 18px 8px;
+    }
+
+    .contacto-trust-item:last-child {
+        border-bottom: 0;
+    }
+
+    .contacto-directorio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-map-card {
+        height: 380px;
+    }
+
+    .contacto-map-overlay {
+        left: 14px;
+        right: 14px;
+        top: 14px;
+
+        max-width: none;
+    }
+
+    .contacto-map-footer {
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+    }
+
+    .contacto-map-footer > a {
+        grid-column: auto;
+    }
+
+    .contacto-whatsapp {
+        top: auto;
+        bottom: 22px;
+
+        min-height: 58px;
+
+        border-radius: 14px 0 0 14px;
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   RESPUESTA FORMULARIO
+========================================================= */
+
+.contacto-respuesta {
+    margin-top: 15px;
+}
+
+
+.contacto-respuesta--success,
+.contacto-respuesta--error {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    border-radius: 8px;
+
+    font-size: .82rem;
+
+    animation: contactoMensajeEntrada .35s ease;
+}
+
+
+.contacto-respuesta--success {
+    border: 1px solid rgba(87, 190, 20, .35);
+
+    background: rgba(142, 232, 0, .08);
+
+    color: #336b0b;
+}
+
+
+.contacto-respuesta--error {
+    border: 1px solid rgba(205, 50, 50, .25);
+
+    background: rgba(205, 50, 50, .06);
+
+    color: #a12727;
+}
+
+
+.contacto-respuesta i {
+    margin-top: 2px;
+
+    font-size: 1.2rem;
+}
+
+
+.contacto-respuesta--success i {
+    color: #69c700;
+}
+
+
+.contacto-respuesta div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.contacto-respuesta strong {
+    font-size: .85rem;
+}
+
+
+.contacto-respuesta span {
+    color: inherit;
+
+    font-size: .76rem;
+    line-height: 1.5;
+}
+
+
+/* Botón desactivado */
+
+.btn-contacto-enviar:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+@keyframes contactoMensajeEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+
+/* =========================================================
+   ÚNETE A NUESTRO EQUIPO - SEESEL
+========================================================= */
+
+.seesel-rh-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   TARJETA PRINCIPAL
+========================================================= */
+
+.seesel-rh-card {
+
+    width: 100%;
+    max-width: 1350px;
+    min-height: 470px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    background: #ffffff;
+
+    border: 1px solid #d7e0ea;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(4, 32, 66, 0.08);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.seesel-rh-info {
+
+    position: relative;
+
+    padding:
+        60px
+        85px
+        50px
+        65px;
+
+    background: #ffffff;
+
+    z-index: 5;
+}
+
+
+/* Línea diagonal azul */
+
+.seesel-rh-info::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -30px;
+    right: -57px;
+
+    width: 90px;
+    height: 120%;
+
+    background: #052b59;
+
+    transform: skewX(-16deg);
+
+    z-index: -1;
+}
+
+
+/* Línea diagonal verde */
+
+.seesel-rh-info::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -30px;
+    right: -70px;
+
+    width: 22px;
+    height: 120%;
+
+    background: #16a34a;
+
+    transform: skewX(-16deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.seesel-rh-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-bottom: 38px;
+}
+
+
+.seesel-rh-icon {
+
+    width: 82px;
+    height: 82px;
+
+    min-width: 82px;
+
+    border: 2px solid #16a34a;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #16a34a;
+
+    font-size: 32px;
+
+    background: #ffffff;
+}
+
+
+.seesel-rh-header h2 {
+
+    margin: 0 0 7px;
+
+    color: #062c5b;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+}
+
+
+.seesel-rh-header h3 {
+
+    margin: 0;
+
+    color: #16a34a;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.seesel-rh-texto {
+
+    max-width: 620px;
+}
+
+
+.seesel-rh-texto p {
+
+    color: #384250;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+.seesel-rh-texto strong {
+
+    color: #062c5b;
+
+    font-weight: 700;
+}
+
+
+.seesel-rh-texto h4 {
+
+    margin:
+
+        24px 0
+        20px;
+
+    color: #062c5b;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.seesel-rh-btn {
+
+    width: fit-content;
+
+    min-width: 470px;
+
+    padding: 17px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #099448
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+
+.seesel-rh-btn i {
+
+    font-size: 22px;
+}
+
+
+.seesel-rh-btn:hover {
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(22, 163, 74, .25);
+
+    background:
+        linear-gradient(
+            135deg,
+            #11883f,
+            #087d3c
+        );
+}
+
+
+/* =========================================================
+   PRIVACIDAD
+========================================================= */
+
+.seesel-rh-privacidad {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #626d78;
+
+    font-size: 13px;
+}
+
+
+.seesel-rh-privacidad i {
+
+    color: #16a34a;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.seesel-rh-imagen {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 470px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #052b59;
+}
+
+
+.seesel-rh-imagen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    transition:
+        transform .8s ease;
+}
+
+
+/* Zoom muy suave */
+
+.seesel-rh-card:hover
+.seesel-rh-imagen img {
+
+    transform: scale(1.025);
+}
+
+
+/* Oscurecido ligero */
+
+.seesel-rh-imagen::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 35, 73, .12),
+            transparent 35%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .seesel-rh-card {
+
+        grid-template-columns:
+            58% 42%;
+    }
+
+
+    .seesel-rh-info {
+
+        padding:
+            50px
+            60px
+            45px
+            45px;
+    }
+
+
+    .seesel-rh-header h2 {
+
+        font-size: 27px;
+    }
+
+
+    .seesel-rh-header h3 {
+
+        font-size: 19px;
+    }
+
+
+    .seesel-rh-btn {
+
+        min-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .seesel-rh-section {
+
+        padding:
+            40px
+            15px;
+    }
+
+
+    .seesel-rh-card {
+
+        display: flex;
+
+        flex-direction: column;
+
+        border-radius: 16px;
+    }
+
+
+    .seesel-rh-info {
+
+        padding:
+            35px
+            25px;
+    }
+
+
+    /* Quitamos diagonales */
+
+    .seesel-rh-info::before,
+    .seesel-rh-info::after {
+
+        display: none;
+    }
+
+
+    .seesel-rh-header {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .seesel-rh-icon {
+
+        width: 60px;
+        height: 60px;
+
+        min-width: 60px;
+
+        font-size: 24px;
+    }
+
+
+    .seesel-rh-header h2 {
+
+        font-size: 23px;
+    }
+
+
+    .seesel-rh-header h3 {
+
+        font-size: 17px;
+    }
+
+
+    .seesel-rh-texto p {
+
+        font-size: 15px;
+    }
+
+
+    .seesel-rh-btn {
+
+        width: 100%;
+
+        min-width: initial;
+
+        padding:
+            16px
+            15px;
+
+        font-size: 14px;
+    }
+
+
+    .seesel-rh-imagen {
+
+        min-height: 330px;
+
+        order: 2;
+    }
+
+
+    .seesel-rh-imagen img {
+
+        object-position: center top;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .seesel-rh-header {
+
+        flex-direction: column;
+    }
+
+
+    .seesel-rh-header h2 {
+
+        font-size: 21px;
+    }
+
+
+    .seesel-rh-header h3 {
+
+        font-size: 16px;
+    }
+
+
+    .seesel-rh-btn {
+
+        text-align: center;
+    }
+
+
+    .seesel-rh-imagen {
+
+        min-height: 270px;
+    }
+
+}

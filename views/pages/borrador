@@ -1,0 +1,63 @@
+<section class="nosotros-recruit">
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="nr-hero">
+      <div class="nr-hero-text">
+        <span class="nr-mini">SEESEL · SERVICIOS ESPECIALES  ELÉCTRICOS </span>
+        <h1>¿Quiénes Somos?</h1>
+        <p>
+         SEESEL es una empresa especializada en servicios eléctricos,
+           fundada el 25 de marzo de 2010 por 
+           <strong>Adrián G. Solís Gatelum y José</strong>  
+           <strong>Rigoberto Hernández Cruz</strong>, con el firme propósito de ofrecer
+            soluciones técnicas confiables y de alta calidad en el ámbito 
+            de los sistemas eléctricos. Desde nuestros inicios, nos hemos 
+            dedicado al diseño, mantenimiento e instalación de sistemas eléctricos 
+            industriales, comerciales y residenciales, trabajando con instalaciones
+            de alta, media y baja tensión, siempre bajo los más altos estándares de
+            seguridad y eficiencia.Nuestro enfoque técnico, la experiencia de nuestro
+            equipo y el compromiso constante con la calidad nos han permitido posicionarnos
+            como una empresa confiable dentro del sector eléctrico, adaptándonos a las necesidades 
+            específicas de cada proyecto y ofreciendo soluciones a la medida.
+             
+        </p>
+
+        <div class="nr-team">
+          <div class="nr-team-icons">
+            <span>S</span>
+            <span>E</span>
+            <span>E</span>
+            <span>S</span>
+            <span>E</span>
+            <span>L</span>
+          </div>
+          <strong>Equipo técnico especializado</strong>
+        </div>
+
+       
+      </div>
+
+      <div class="nr-hero-image">
+        <div class="shape shape-green"></div>
+        <div class="shape shape-dark"></div>
+
+  <div class="nr-hero-image">
+  <div class="nr-double-images">
+    <div class="nr-photo-card">
+      <img src="public/img/111.jpeg" alt="Equipo SEESEL">
+    </div>
+
+    <div class="nr-photo-card">
+      <img src="public/img/112.jpeg" alt="Personal SEESEL">
+    </div>
+  </div>
+</div>
+
+     
+
+    <div class="nr-top-cards mision-vision">
+
+
+</section>

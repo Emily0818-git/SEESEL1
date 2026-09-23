@@ -1,0 +1,84 @@
+<?php
+$esHome = false;
+
+$controller = $_GET['c'] ?? '';
+$action     = $_GET['a'] ?? '';
+
+if ($controller === '' || $controller === 'home') {
+  $esHome = true;
+}
+
+if ($esHome) return;
+?>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-clean">
+  <div class="container navbar-tecsa">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="index.php">
+      <img src="public/img/logo.png" alt="SEESEL" class="logo-navbar-clean">
+    </a>
+
+    <!-- BOTÓN RESPONSIVE -->
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENÚ -->
+    <div class="collapse navbar-collapse justify-content-center" id="menu">
+      <ul class="navbar-nav align-items-center mx-auto">
+
+        <li class="nav-item">
+          <a class="nav-link <?= ($controller === '' || $controller === 'home') ? 'active' : '' ?>"
+             href="index.php">
+            <i class="fa-solid fa-house me-2"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?= ($action === 'servicios' || $controller === 'servicios') ? 'active' : '' ?>"
+             href="index.php?c=pages&a=servicios">
+            <i class="fa-solid fa-screwdriver-wrench me-2"></i> Servicios
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?= ($controller === 'productos') ? 'active' : '' ?>"
+             href="index.php?c=productos">
+            <i class="fa-solid fa-boxes-stacked me-2"></i> Productos
+          </a>
+        </li>
+
+         <!-- NUEVO APARTADO: PROYECTOS -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($action === 'proyectos' || $controller === 'proyectos') ? 'active' : '' ?>"
+         href="index.php?c=pages&a=proyectos">
+        <i class="fa-solid fa-diagram-project me-2"></i> Proyectos
+      </a>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?= ($action === 'nosotros' || $controller === 'nosotros') ? 'active' : '' ?>"
+             href="index.php?c=pages&a=nosotros">
+            <i class="fa-solid fa-building me-2"></i> Nosotros
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?= ($action === 'contacto' || $controller === 'contacto') ? 'active' : '' ?>"
+             href="index.php?c=pages&a=contacto">
+            <i class="fa-solid fa-envelope me-2"></i> Contacto
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,2742 @@
+/* =========================================================
+   TOP BAR + NAVBAR SEESEL
+   Versión limpia y unificada
+========================================================= */
+
+:root {
+    --topbar-height: 34px;
+
+    --nav-bg-1: #031825;
+    --nav-bg-2: #041f2d;
+    --nav-bg-3: #062331;
+
+    --green: #16a34a;
+    --green-light: #7ed800;
+
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    width: 100%;
+    min-height: var(--topbar-height);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #031725 0%,
+            #062331 50%,
+            #031725 100%
+        );
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 2px 12px rgba(0,0,0,0.15);
+
+    color: #fff;
+}
+
+
+/* Links dentro de top bar */
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.top-bar a:hover {
+    color: var(--green-light);
+}
+
+
+/* =========================================================
+   NAVBAR PRINCIPAL
+========================================================= */
+
+.navbar-clean {
+    width: 100%;
+
+    position: sticky;
+    top: var(--topbar-height);
+
+    z-index: 9999;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(34,255,128,0.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(34,255,128,0.06),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(3,24,37,0.98),
+            rgba(4,31,45,0.98),
+            rgba(3,24,37,0.98)
+        ) !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-top: 0;
+
+    border-bottom:
+        1px solid rgba(54,255,133,0.28);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.20),
+        inset 0 -1px 0 rgba(54,255,133,0.14);
+
+    animation:
+        navbarBreath 7s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CONTENEDOR INTERNO
+========================================================= */
+
+.navbar-tecsa {
+    width: 100%;
+    max-width: 1450px;
+
+    min-height: 82px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 7px 22px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(66,115,85,0.35) 1px,
+            transparent 1.5px
+        ),
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.10) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        95px 95px,
+        145px 145px;
+
+    background-position:
+        10px 20px,
+        60px 45px;
+
+    animation:
+        navbarParticles 16s linear infinite;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-right: 35px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+.logo-navbar-clean {
+    width: 1px;
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(255,255,255,0.25)
+        );
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+.navbar-brand:hover .logo-navbar-clean {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 0 18px rgba(126,216,0,0.35)
+        );
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.navbar-clean .navbar-collapse {
+    position: relative;
+    z-index: 5;
+
+    padding-top: 3px;
+}
+
+
+.navbar-clean .navbar-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* Links */
+.navbar-clean .nav-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: #fff !important;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 12px 15px !important;
+
+    border-radius: 3px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Iconos */
+.navbar-clean .nav-link i {
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Hover */
+.navbar-clean .nav-link:hover {
+    color: var(--green-light) !important;
+
+    background:
+        rgba(126,216,0,0.05);
+
+    box-shadow:
+        0 0 18px rgba(126,216,0,0.10);
+
+    transform: translateY(-1px);
+}
+
+
+.navbar-clean .nav-link:hover i {
+    color: var(--green-light);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   LINK ACTIVO
+========================================================= */
+
+.navbar-clean .nav-link.active {
+    color: #fff !important;
+
+    font-weight: 700;
+
+    background:
+        transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+
+/* Línea activa inferior */
+.navbar-clean .nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    transform: translateX(-50%);
+
+    width: 32px;
+    height: 2px;
+
+    background:
+        var(--green-light);
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 0 8px rgba(126,216,0,0.65);
+}
+
+
+/* =========================================================
+   BOTÓN TOGGLER
+========================================================= */
+
+.navbar-toggler {
+    position: relative;
+    z-index: 5;
+
+    border:
+        1px solid rgba(126,216,0,0.35);
+
+    background:
+        rgba(126,216,0,0.05);
+
+    box-shadow:
+        0 0 12px rgba(126,216,0,0.10);
+
+    border-radius: 4px;
+
+    padding: 8px 10px;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow:
+        0 0 16px rgba(126,216,0,0.22);
+}
+
+
+/* =========================================================
+   LÍNEA INFERIOR
+========================================================= */
+
+.navbar-clean::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(126,216,0,0.25) 15%,
+            rgba(126,216,0,0.70) 50%,
+            rgba(126,216,0,0.25) 85%,
+            transparent 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(126,216,0,0.18);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   EFECTO DE CIRCUITO SUAVE
+========================================================= */
+
+.navbar-clean::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -15px;
+
+    width: 42%;
+    height: 48px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(54,255,133,0.18) 30%,
+            transparent 30%
+        )
+        0 18px / 180px 1px repeat-x,
+
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(54,255,133,0.12) 40%,
+            transparent 40%
+        )
+        0 33px / 230px 1px repeat-x,
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.35) 0 1.5px,
+            transparent 2.5px
+        );
+
+    background-size:
+        180px 1px,
+        230px 1px,
+        95px 45px;
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        circuitMove 14s linear infinite;
+}
+
+
+/* =========================================================
+   LUZ INTERIOR RECORRIENDO
+========================================================= */
+
+.navbar-clean .navbar-tecsa::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -35%;
+
+    width: 28%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(126,216,0,0.05),
+            rgba(255,255,255,0.04),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    animation:
+        navbarInnerLight 10s linear infinite;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   PULSO ELÉCTRICO INFERIOR
+========================================================= */
+
+.navbar-clean .navbar-tecsa::after {
+    content: "";
+
+    position: absolute;
+
+    left: -25%;
+    bottom: 0;
+
+    width: 25%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffffff,
+            var(--green-light),
+            transparent
+        );
+
+    filter:
+        blur(0.3px);
+
+    box-shadow:
+        0 0 10px rgba(126,216,0,0.45);
+
+    animation:
+        navEnergyPulse 8s linear infinite;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   BOTÓN CTA DEL NAVBAR
+========================================================= */
+
+.navbar-clean .btn-nav,
+.navbar-clean .btn-navbar,
+.navbar-clean .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    margin-left: 28px;
+
+    background:
+        var(--green-light);
+
+    color:
+        #06202c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.navbar-clean .btn-nav:hover,
+.navbar-clean .btn-navbar:hover,
+.navbar-clean .nav-cta:hover {
+    background:
+        #98ec00;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(126,216,0,0.20);
+
+    color:
+        #06202c;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes navbarBreath {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 28px rgba(0,0,0,0.18),
+            inset 0 -1px 0 rgba(54,255,133,0.12);
+    }
+
+    50% {
+        box-shadow:
+            0 9px 32px rgba(0,0,0,0.24),
+            inset 0 -1px 0 rgba(126,216,0,0.20);
+    }
+}
+
+
+@keyframes navbarInnerLight {
+
+    0% {
+        left: -35%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    60%,
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+
+@keyframes navbarParticles {
+
+    0% {
+        background-position:
+            10px 20px,
+            60px 45px;
+    }
+
+    100% {
+        background-position:
+            110px 20px,
+            180px 45px;
+    }
+}
+
+
+@keyframes circuitMove {
+
+    0% {
+        background-position:
+            0 18px,
+            0 33px,
+            0 0;
+    }
+
+    100% {
+        background-position:
+            180px 18px,
+            230px 33px,
+            95px 0;
+    }
+}
+
+
+@keyframes navEnergyPulse {
+
+    0% {
+        left: -25%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    60% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   SIN BORDES REDONDEADOS
+========================================================= */
+
+.navbar-clean,
+.navbar,
+.navbar-expand-lg,
+.container.navbar-tecsa {
+    border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .navbar-clean .navbar-nav {
+        gap: 10px;
+    }
+
+
+    .navbar-clean .nav-link {
+        font-size: 14px;
+
+        padding:
+            12px 10px !important;
+    }
+
+
+    .navbar-brand {
+        margin-right: 20px;
+    }
+
+
+    .logo-navbar-clean {
+        width: 105px;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    :root {
+        --topbar-height: 38px;
+    }
+
+
+    .navbar-tecsa {
+        min-height: 72px;
+
+        padding:
+            8px 18px;
+    }
+
+
+    .logo-navbar-clean {
+        width: 100px;
+    }
+
+
+    .navbar-collapse {
+        margin-top: 10px;
+
+        padding:
+            16px;
+
+        background:
+            rgba(3,24,37,0.98);
+
+        border:
+            1px solid rgba(126,216,0,0.18);
+
+        border-radius:
+            8px;
+
+        box-shadow:
+            0 15px 30px rgba(0,0,0,0.20);
+    }
+
+
+    .navbar-clean .navbar-nav {
+        gap: 5px;
+    }
+
+
+    .navbar-clean .nav-link {
+        justify-content: center;
+
+        font-size: 15px;
+
+        padding:
+            13px 18px !important;
+    }
+
+
+    .navbar-clean .nav-link.active::after {
+        bottom: 6px;
+    }
+
+
+    .navbar-clean .btn-nav,
+    .navbar-clean .btn-navbar,
+    .navbar-clean .nav-cta {
+        width: 100%;
+
+        margin:
+            12px 0 0;
+
+        padding:
+            14px 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .top-bar {
+        font-size: 11px;
+    }
+
+
+    .navbar-tecsa {
+        min-height: 68px;
+    }
+
+
+    .logo-navbar-clean {
+        width: 92px;
+    }
+}
+
+
+
+
+/* =========================================================
+   FIX DEFINITIVO TOP BAR + NAVBAR SEESEL
+   PEGAR AL FINAL DE TODO EL CSS
+========================================================= */
+
+/* Barra superior */
+.top-bar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10001 !important;
+
+    min-height: 38px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: #062331 !important;
+
+    margin: 0 !important;
+    padding: 5px 0 !important;
+
+    border-bottom: 1px solid rgba(126, 216, 0, 0.18) !important;
+}
+
+
+/* Navbar debajo de la barra */
+.navbar-clean {
+    position: sticky !important;
+
+    /* Debajo de la top-bar */
+    top: 38px !important;
+
+    z-index: 10000 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #071c2a !important;
+
+    border-top: none !important;
+
+    border-bottom:
+        1px solid rgba(126, 216, 0, 0.20) !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18) !important;
+}
+
+
+/* Contenedor del menú */
+.navbar-clean .navbar-tecsa {
+    min-height: 84px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 8px 28px !important;
+
+    margin: 0 auto !important;
+
+    position: relative !important;
+}
+
+
+/* Logo */
+.navbar-clean .navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+
+    margin-right: 45px !important;
+
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+}
+
+
+.navbar-clean .logo-navbar-clean {
+    width: 112px !important;
+    height: auto !important;
+
+    display: block !important;
+}
+
+
+/* Menú */
+.navbar-clean .navbar-collapse {
+    align-items: center !important;
+
+    padding-top: 5px !important;
+}
+
+
+.navbar-clean .navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 20px !important;
+}
+
+
+/* Links */
+.navbar-clean .nav-link {
+    color: #ffffff !important;
+
+    font-size: 15px !important;
+    font-weight: 500 !important;
+
+    padding: 13px 14px !important;
+
+    margin: 0 !important;
+
+    line-height: 1.2 !important;
+}
+
+
+/* Activo */
+.navbar-clean .nav-link.active {
+    color: #ffffff !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* Línea verde activa */
+.navbar-clean .nav-link.active::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    bottom: 3px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 30px !important;
+    height: 2px !important;
+
+    background: #86d900 !important;
+
+    border-radius: 10px !important;
+
+    box-shadow:
+        0 0 8px rgba(134, 217, 0, 0.60) !important;
+}
+
+
+/* Botón solicitar asesoría */
+.navbar-clean .btn-nav,
+.navbar-clean .btn-navbar,
+.navbar-clean .nav-cta {
+    margin-left: 30px !important;
+
+    padding: 13px 24px !important;
+
+    background: #86d900 !important;
+
+    color: #062331 !important;
+
+    font-weight: 700 !important;
+
+    border-radius: 0 !important;
+}
+
+
+/* Responsive */
+@media (max-width: 991px) {
+
+    .navbar-clean {
+        top: 38px !important;
+    }
+
+    .navbar-clean .navbar-tecsa {
+        min-height: 74px !important;
+
+        padding: 8px 18px !important;
+    }
+
+    .navbar-clean .logo-navbar-clean {
+        width: 100px !important;
+    }
+
+    .navbar-clean .navbar-collapse {
+        margin-top: 8px !important;
+
+        padding: 16px !important;
+
+        background: #071c2a !important;
+    }
+
+    .navbar-clean .navbar-nav {
+        gap: 6px !important;
+    }
+
+    .navbar-clean .nav-link {
+        text-align: center !important;
+
+        justify-content: center !important;
+
+        padding: 12px 15px !important;
+    }
+}
+
+
+
+/* ==========================================
+   MENÚ MÁS GRANDE
+========================================== */
+
+.navbar-clean .nav-link {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+
+    padding: 14px 16px !important;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* Dropdown de Servicios */
+.navbar-clean .dropdown-menu .dropdown-item {
+    font-size: 15px !important;
+}
+
+
+/* Pantallas medianas */
+@media (max-width: 1200px) {
+
+    .navbar-clean .nav-link {
+        font-size: 16px !important;
+        padding: 13px 12px !important;
+    }
+
+}
+
+
+/* Tablet / móvil */
+@media (max-width: 991px) {
+
+    .navbar-clean .nav-link {
+        font-size: 16px !important;
+        padding: 14px 18px !important;
+    }
+
+}
+
+
+/* =========================================================
+   CORRECCIÓN VISUAL NAVBAR STICKY
+========================================================= */
+
+/* Navbar más limpio */
+.navbar-global {
+    min-height: 74px !important;
+    height: 74px !important;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+/* Contenedor */
+.navbar-global .container {
+    min-height: 74px !important;
+    height: 74px !important;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+/* Logo más proporcionado */
+.navbar-global .navbar-brand {
+    height: 74px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 4px 0 !important;
+}
+
+
+.navbar-global .navbar-brand img {
+    width: 125px !important;
+    height: 66px !important;
+
+    object-fit: contain !important;
+}
+
+
+/* Menú centrado verticalmente */
+.navbar-global .navbar-collapse {
+    height: 100% !important;
+    align-items: center !important;
+}
+
+
+.navbar-global .navbar-nav {
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 18px !important;
+}
+
+
+/* Links */
+.navbar-global .navbar-nav .nav-link {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+
+    padding: 12px 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    line-height: 1 !important;
+}
+
+
+/* Botón asesoría centrado */
+.navbar-global .btn-nav,
+.navbar-global .nav-cta,
+.navbar-global .btn-navbar {
+    min-height: 46px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* IMPORTANTE:
+   antes era necesario porque el navbar era absolute.
+   Ahora que es sticky ya no necesitamos reservar 166px.
+*/
+.inicio-hero {
+    padding-top: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BOTÓN BUZÓN - TOP BAR
+========================================================= */
+
+.btn-buzon-tierras {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.btn-buzon-tierras:hover {
+    background: #ffffff;
+    color: #08783f;
+    border-color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.btn-buzon-icono {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,.14);
+}
+
+.btn-buzon-tierras:hover .btn-buzon-icono {
+    background: rgba(8,120,63,.10);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-buzon-content {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 90px rgba(0, 30, 50, .22);
+}
+
+.modal-buzon-header {
+    padding: 20px 28px;
+
+    border-bottom: 1px solid #e8eeeb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7fbf9 0%,
+            #ffffff 65%
+        );
+}
+
+.buzon-header-contenido {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.buzon-header-icono {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(22,163,74,.25);
+}
+
+.buzon-mini-titulo {
+    display: block;
+
+    color: #16864c;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+
+    margin-bottom: 2px;
+}
+
+.modal-buzon-header .modal-title {
+    color: #102a43;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PASO 1
+========================================================= */
+
+.buzon-introduccion {
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: 5px auto 25px;
+}
+
+.buzon-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 13px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50px;
+
+    background: #eaf7ef;
+
+    color: #118447;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+
+.buzon-introduccion h3 {
+    margin: 0 0 9px;
+
+    color: #102a43;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.buzon-introduccion p {
+    max-width: 660px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.buzon-imagen-contenedor {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #e7ece9;
+    border-radius: 18px;
+
+    background: #f8fbf9;
+
+    overflow: hidden;
+}
+
+.buzon-imagen {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   FOOTER PASO 1
+========================================================= */
+
+.buzon-paso-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding-top: 23px;
+}
+
+.buzon-seguridad {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.buzon-seguridad i {
+    color: #16a34a;
+}
+
+.btn-continuar-buzon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    min-width: 170px;
+
+    padding: 13px 23px;
+
+    border: none;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(22,163,74,.23);
+
+    transition: all .3s ease;
+}
+
+.btn-continuar-buzon:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(22,163,74,.30);
+}
+
+.btn-continuar-buzon i {
+    transition: transform .3s ease;
+}
+
+.btn-continuar-buzon:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PASO 2
+========================================================= */
+
+.formulario-buzon-encabezado {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding-bottom: 22px;
+    margin-bottom: 23px;
+
+    border-bottom: 1px solid #e8eeeb;
+}
+
+.btn-regresar-buzon {
+    flex-shrink: 0;
+
+    padding: 9px 13px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #50606d;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.btn-regresar-buzon:hover {
+    border-color: #16a34a;
+
+    color: #118447;
+
+    background: #f1faf4;
+}
+
+.formulario-buzon-paso {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+.formulario-buzon-encabezado h3 {
+    margin: 0 0 4px;
+
+    color: #102a43;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.formulario-buzon-encabezado p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+#formBuzonTierras .form-label {
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#formBuzonTierras .form-label span {
+    color: #16a34a;
+}
+
+.input-buzon {
+    position: relative;
+}
+
+.input-buzon > i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8fa19a;
+
+    font-size: 13px;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.input-buzon .form-control,
+.input-buzon .form-select {
+    min-height: 48px;
+
+    padding-left: 42px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 9px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    box-shadow: none;
+
+    transition: all .25s ease;
+}
+
+.input-buzon .form-control:focus,
+.input-buzon .form-select:focus,
+.textarea-buzon:focus {
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22,163,74,.09);
+}
+
+.textarea-buzon {
+    padding: 14px 16px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 9px;
+
+    resize: vertical;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.buzon-ayuda {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.contador-buzon {
+    margin-top: 5px;
+
+    text-align: right;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   AVISO
+========================================================= */
+
+.aviso-buzon {
+    display: flex;
+    gap: 12px;
+
+    padding: 15px 17px;
+
+    border-left: 3px solid #16a34a;
+    border-radius: 8px;
+
+    background: #f3faf6;
+}
+
+.aviso-buzon > i {
+    margin-top: 2px;
+
+    color: #16a34a;
+}
+
+.aviso-buzon strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #183b2d;
+
+    font-size: 12px;
+}
+
+.aviso-buzon p {
+    margin: 0;
+
+    color: #66756e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOTÓN ENVIAR
+========================================================= */
+
+.buzon-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 7px;
+}
+
+.buzon-form-footer > span {
+    color: #74837c;
+
+    font-size: 11px;
+}
+
+.buzon-form-footer > span i {
+    margin-right: 5px;
+
+    color: #16a34a;
+}
+
+.btn-enviar-buzon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 175px;
+
+    padding: 13px 21px;
+
+    border: none;
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(22,163,74,.20);
+
+    transition: .3s ease;
+}
+
+.btn-enviar-buzon:hover {
+    transform: translateY(-2px);
+}
+
+.btn-enviar-buzon:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   HONEYPOT
+========================================================= */
+
+.campo-web-buzon {
+    position: absolute !important;
+
+    left: -99999px !important;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .btn-buzon-tierras span:not(.btn-buzon-icono) {
+        display: none;
+    }
+
+    .btn-buzon-tierras {
+        padding: 5px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .modal-buzon-content {
+        border-radius: 15px;
+    }
+
+    .modal-buzon-header {
+        padding: 15px 18px;
+    }
+
+    .buzon-paso-footer,
+    .buzon-form-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-continuar-buzon,
+    .btn-enviar-buzon {
+        width: 100%;
+    }
+
+    .buzon-seguridad {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .formulario-buzon-encabezado {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+/* =========================================================
+   BOTÓN BUZÓN - TOP BAR
+========================================================= */
+
+.btn-buzon-tierras {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.btn-buzon-tierras:hover {
+    background: #ffffff;
+    color: #08783f;
+    border-color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.btn-buzon-icono {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,.14);
+}
+
+.btn-buzon-tierras:hover .btn-buzon-icono {
+    background: rgba(8,120,63,.10);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-buzon-content {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 90px rgba(0, 30, 50, .22);
+}
+
+.modal-buzon-header {
+    padding: 20px 28px;
+
+    border-bottom: 1px solid #e8eeeb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7fbf9 0%,
+            #ffffff 65%
+        );
+}
+
+.buzon-header-contenido {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.buzon-header-icono {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(22,163,74,.25);
+}
+
+.buzon-mini-titulo {
+    display: block;
+
+    color: #16864c;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+
+    margin-bottom: 2px;
+}
+
+.modal-buzon-header .modal-title {
+    color: #102a43;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PASO 1
+========================================================= */
+
+.buzon-introduccion {
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: 5px auto 25px;
+}
+
+.buzon-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 13px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50px;
+
+    background: #eaf7ef;
+
+    color: #118447;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+
+.buzon-introduccion h3 {
+    margin: 0 0 9px;
+
+    color: #102a43;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.buzon-introduccion p {
+    max-width: 660px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.buzon-imagen-contenedor {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #e7ece9;
+    border-radius: 18px;
+
+    background: #f8fbf9;
+
+    overflow: hidden;
+}
+
+.buzon-imagen {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   FOOTER PASO 1
+========================================================= */
+
+.buzon-paso-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding-top: 23px;
+}
+
+.buzon-seguridad {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.buzon-seguridad i {
+    color: #16a34a;
+}
+
+.btn-continuar-buzon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    min-width: 170px;
+
+    padding: 13px 23px;
+
+    border: none;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(22,163,74,.23);
+
+    transition: all .3s ease;
+}
+
+.btn-continuar-buzon:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(22,163,74,.30);
+}
+
+.btn-continuar-buzon i {
+    transition: transform .3s ease;
+}
+
+.btn-continuar-buzon:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PASO 2
+========================================================= */
+
+.formulario-buzon-encabezado {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding-bottom: 22px;
+    margin-bottom: 23px;
+
+    border-bottom: 1px solid #e8eeeb;
+}
+
+.btn-regresar-buzon {
+    flex-shrink: 0;
+
+    padding: 9px 13px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #50606d;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.btn-regresar-buzon:hover {
+    border-color: #16a34a;
+
+    color: #118447;
+
+    background: #f1faf4;
+}
+
+.formulario-buzon-paso {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+.formulario-buzon-encabezado h3 {
+    margin: 0 0 4px;
+
+    color: #102a43;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.formulario-buzon-encabezado p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+#formBuzonTierras .form-label {
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#formBuzonTierras .form-label span {
+    color: #16a34a;
+}
+
+.input-buzon {
+    position: relative;
+}
+
+.input-buzon > i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8fa19a;
+
+    font-size: 13px;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.input-buzon .form-control,
+.input-buzon .form-select {
+    min-height: 48px;
+
+    padding-left: 42px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 9px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    box-shadow: none;
+
+    transition: all .25s ease;
+}
+
+.input-buzon .form-control:focus,
+.input-buzon .form-select:focus,
+.textarea-buzon:focus {
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22,163,74,.09);
+}
+
+.textarea-buzon {
+    padding: 14px 16px;
+
+    border: 1px solid #dce5e0;
+    border-radius: 9px;
+
+    resize: vertical;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.buzon-ayuda {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.contador-buzon {
+    margin-top: 5px;
+
+    text-align: right;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   AVISO
+========================================================= */
+
+.aviso-buzon {
+    display: flex;
+    gap: 12px;
+
+    padding: 15px 17px;
+
+    border-left: 3px solid #16a34a;
+    border-radius: 8px;
+
+    background: #f3faf6;
+}
+
+.aviso-buzon > i {
+    margin-top: 2px;
+
+    color: #16a34a;
+}
+
+.aviso-buzon strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #183b2d;
+
+    font-size: 12px;
+}
+
+.aviso-buzon p {
+    margin: 0;
+
+    color: #66756e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOTÓN ENVIAR
+========================================================= */
+
+.buzon-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 7px;
+}
+
+.buzon-form-footer > span {
+    color: #74837c;
+
+    font-size: 11px;
+}
+
+.buzon-form-footer > span i {
+    margin-right: 5px;
+
+    color: #16a34a;
+}
+
+.btn-enviar-buzon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 175px;
+
+    padding: 13px 21px;
+
+    border: none;
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #08783f
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(22,163,74,.20);
+
+    transition: .3s ease;
+}
+
+.btn-enviar-buzon:hover {
+    transform: translateY(-2px);
+}
+
+.btn-enviar-buzon:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   HONEYPOT
+========================================================= */
+
+.campo-web-buzon {
+    position: absolute !important;
+
+    left: -99999px !important;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .btn-buzon-tierras span:not(.btn-buzon-icono) {
+        display: none;
+    }
+
+    .btn-buzon-tierras {
+        padding: 5px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .modal-buzon-content {
+        border-radius: 15px;
+    }
+
+    .modal-buzon-header {
+        padding: 15px 18px;
+    }
+
+    .buzon-paso-footer,
+    .buzon-form-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-continuar-buzon,
+    .btn-enviar-buzon {
+        width: 100%;
+    }
+
+    .buzon-seguridad {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .formulario-buzon-encabezado {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   CARRUSEL BUZÓN
+========================================================= */
+
+.buzon-carrusel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.buzon-slides {
+    position: relative;
+    width: 100%;
+}
+
+
+.buzon-slide {
+    display: none;
+    width: 100%;
+    animation: buzonFade .55s ease;
+}
+
+
+.buzon-slide.active {
+    display: block;
+}
+
+
+.buzon-slide .buzon-imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   FLECHAS
+========================================================= */
+
+.buzon-carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(4, 24, 35, .78);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    transition:
+        opacity .3s ease,
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.buzon-carrusel:hover .buzon-carrusel-btn {
+    opacity: 1;
+}
+
+
+.buzon-carrusel-btn:hover {
+    background: #169447;
+}
+
+
+.buzon-prev {
+    left: 15px;
+}
+
+
+.buzon-next {
+    right: 15px;
+}
+
+
+/* =========================================================
+   INDICADORES
+========================================================= */
+
+.buzon-indicadores {
+    position: absolute;
+
+    left: 50%;
+    bottom: 12px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(2, 18, 28, .58);
+
+    z-index: 6;
+}
+
+
+.buzon-indicador {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .55);
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+
+.buzon-indicador.active {
+    width: 23px;
+
+    border-radius: 10px;
+
+    background: #55c94b;
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+
+@keyframes buzonFade {
+
+    from {
+        opacity: .25;
+        transform: scale(.995);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .buzon-carrusel-btn {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+
+        opacity: 1;
+    }
+
+
+    .buzon-prev {
+        left: 7px;
+    }
+
+
+    .buzon-next {
+        right: 7px;
+    }
+
+
+    .buzon-indicadores {
+        bottom: 7px;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   SELECTOR DE IDIOMA - NAVBAR HOME
+========================================================= */
+
+.inicio-navbar-idioma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14px;
+    min-height: 47px;
+}
+
+/* CONTENEDOR DONDE CONVEYTHIS INSERTA EL WIDGET */
+.inicio-navbar-idioma #conveythis-language-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* =========================================================
+   CONVEYTHIS
+========================================================= */
+
+.inicio-navbar-idioma .conveythis-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* BOTÓN DEL IDIOMA */
+.inicio-navbar-idioma .conveythis-widget-current-language,
+.inicio-navbar-idioma .conveythis-widget-language {
+    min-height: 47px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    padding: 0 13px !important;
+    background: rgba(3, 24, 35, 0.88) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease !important;
+}
+
+/* TEXTO */
+.inicio-navbar-idioma .language-title,
+.inicio-navbar-idioma span {
+    color: #ffffff !important;
+}
+
+/* BANDERA */
+.inicio-navbar-idioma img {
+    max-width: 22px !important;
+    height: auto !important;
+}
+
+/* HOVER */
+.inicio-navbar-idioma .conveythis-widget-current-language:hover,
+.inicio-navbar-idioma .conveythis-widget-language:hover {
+    background: rgba(10, 46, 58, .96) !important;
+    border-color: #8bd80a !important;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+    .inicio-navbar-idioma {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 991px) {
+    .inicio-navbar-idioma {
+        width: auto;
+        margin-left: 10px;
+    }
+}
+

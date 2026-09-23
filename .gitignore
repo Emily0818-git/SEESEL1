@@ -1,0 +1,26 @@
+# ==========================================
+# SEESEL - Archivos que NO deben ir a GitHub
+# ==========================================
+
+# Credenciales y datos sensibles
+Credenciales/
+.env
+.env.*
+*.key
+*.pem
+
+# Dependencias de Composer
+vendor/
+
+# Configuración de VS Code / Windows
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archivos auxiliares descargados de WhatsApp
+public/img/img/web.whatsapp.com_files/
+
+
+# Archivos auxiliares de WhatsApp
+public/img/web.whatsapp.com_files/
+public/img/img/web.whatsapp.com_files/
