@@ -3,7 +3,7 @@
 # ==========================================
 
 # Credenciales y datos sensibles
-Credenciales/
+
 .env
 .env.*
 *.key
