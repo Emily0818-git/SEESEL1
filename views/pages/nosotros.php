@@ -14,7 +14,7 @@
 
         <div class="nosotros-hero-bg">
             <img
-                src="public/img/225.PNG"
+                src="public/img/225.png"
                 alt="Equipo de trabajo SEESEL"
             >
         </div>
@@ -759,7 +759,7 @@
 
                 <figure class="galeria-item galeria-alta reveal-up">
                     <img
-                        src="public/img/19.19.PNG"
+                        src="public/img/19.19.png"
                         alt="Técnicos trabajando en red eléctrica"
                     >
 

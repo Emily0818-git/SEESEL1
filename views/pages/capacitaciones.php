@@ -704,7 +704,7 @@
 
                     <div class="cap-gallery-item">
                         <img
-                            src="public/img/EHS.PNG"
+                            src="public/img/EHS.png"
                             alt="Capacitación técnica SEESEL"
                         >
                     </div>
@@ -712,7 +712,7 @@
 
                     <div class="cap-gallery-item">
                         <img
-                            src="public/img/EHS.4.PNG"
+                            src="public/img/EHS.4.png"
                             alt="Práctica con equipos especializados"
                         >
                     </div>
@@ -720,7 +720,7 @@
 
                     <div class="cap-gallery-item">
                         <img
-                            src="public/img/EHS.5.PNG"
+                            src="public/img/EHS.5.png"
                             alt="Personal SEESEL en capacitación"
                         >
                     </div>
