@@ -585,7 +585,7 @@
                     <div class="catalogo-servicio-imagen">
 
                         <img
-                            src="public/img/23.23.PNG"
+                            src="public/img/23.23.png"
                             alt="Análisis de aceite dieléctrico"
                             loading="lazy"
                         >
@@ -737,7 +737,7 @@
                     <div class="catalogo-servicio-imagen">
 
                         <img
-                            src="public/img/INSPECCION.PNG"
+                            src="public/img/INSPECCION.png"
                             alt="Análisis de aceite dieléctrico"
                             loading="lazy"
                         >
@@ -836,7 +836,7 @@
                     <div class="catalogo-servicio-imagen">
 
                         <img
-                            src="public/img/UVIE.PNG"
+                            src="public/img/UVIE.png"
                             alt="Análisis de aceite dieléctrico"
                             loading="lazy"
                         >
@@ -886,7 +886,7 @@
                     <div class="catalogo-servicio-imagen">
 
                         <img
-                            src="public/img/SIMULACION.PNG"
+                            src="public/img/SIMULACION.png"
                             alt="Análisis de aceite dieléctrico"
                             loading="lazy"
                         >
@@ -1250,7 +1250,7 @@
 
                     <img
                         id="mantenimiento-imagen"
-                        src="public/img/11.11.PNG"
+                        src="public/img/11.11.png"
                         alt="Mantenimiento preventivo realizado por SEESEL"
                     >
 
@@ -1534,7 +1534,7 @@
                 <div class="respaldo-card-imagen">
 
                     <img
-                        src="public/img/213.PNG"
+                        src="public/img/213.png"
                         alt="Equipos especializados para pruebas eléctricas"
                         loading="lazy"
                     >
@@ -1592,7 +1592,7 @@
                 <div class="respaldo-card-imagen">
 
                     <img
-                        src="public/img/215.PNG"
+                        src="public/img/215.png"
                         alt="Personal SEESEL certificado"
                         loading="lazy"
                     >
@@ -1650,7 +1650,7 @@
                 <div class="respaldo-card-imagen">
 
                     <img
-                        src="public/img/217.PNG"
+                        src="public/img/217.png"
                         alt="Informes técnicos de pruebas eléctricas"
                         loading="lazy"
                     >
@@ -1708,7 +1708,7 @@
                 <div class="respaldo-card-imagen">
 
                     <img
-                        src="public/img/216.1.PNG"
+                        src="public/img/216.1.png"
                         alt="Cumplimiento de normativa eléctrica"
                         loading="lazy"
                     >

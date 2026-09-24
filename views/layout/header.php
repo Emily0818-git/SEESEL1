@@ -278,7 +278,7 @@
                     <!-- IMAGEN 2 -->
                     <div class="buzon-slide">
                         <img
-                            src="public/img/PROCESO2.JPG"
+                            src="public/img/PROCESO2.jpg"
                             alt="Información adicional del proceso de atención SEESEL"
                             class="buzon-imagen"
                         >
