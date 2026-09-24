@@ -38,6 +38,7 @@
     rel="stylesheet"
     href="public/css/productos.css?v=<?php echo time(); ?>"
 >
+    <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 
     <link
     rel="stylesheet"
