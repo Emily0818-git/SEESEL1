@@ -994,7 +994,7 @@
                 </a>
 
                 <a
-                    href="https://wa.me/524422868081"
+                    href="https://wa.me/524423413109"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="cta-whatsapp"

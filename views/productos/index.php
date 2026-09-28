@@ -632,7 +632,7 @@
                             type="button"
                             class="catalogo-producto-boton"
                             data-bs-toggle="modal"
-                            data-bs-target="#modalApartarrayos"
+                            data-bs-target="#modalCortacircuitos"
                         >
                             <span>Ver más</span>
                             <i class="fa-solid fa-arrow-right"></i>

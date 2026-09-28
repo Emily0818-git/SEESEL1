@@ -62,7 +62,7 @@
                             <div class="modal-general-image-glow"></div>
 
                             <img
-                                src="public/img/productos/cortacircuitos.png"
+                                src="public/img/138.png"
                                 alt="Cortacircuitos eléctricos SEESEL"
                                 class="modal-general-image"
                             >
