@@ -77,7 +77,7 @@
 
                 <div class="identidad-foto">
                     <img
-                        src="public/img/99.jpg"
+                        src="public/img/99.JPG"
                         alt="Técnico SEESEL trabajando en instalación eléctrica"
                     >
                 </div>

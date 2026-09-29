@@ -62,7 +62,7 @@
                             <div class="modal-general-image-glow"></div>
 
                             <img
-                                src="public/img/productos/aceite-dielectrico.png"
+                                src="public/img/135.png"
                                 alt="Aceite dieléctrico SEESEL"
                                 class="modal-general-image"
                             >

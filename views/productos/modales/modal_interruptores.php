@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Pastilla interruptora para riel din 5sl 1x4a 6ka 250/440v",
                     imagen:
-                        "public/img/IN.3.JPEG"
+                        "public/img/IN.3.jpeg"
                 },
                 {
                     tipo: "Baja tensión",
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Uso común en Industrias grandes, redes de distribución urbana y subestaciones, cuenta con un Voltaje De 1,000 V hasta 35,000 V. Medio de extinción: Usan aire, vacío o gas hexafluoruro de azufre (SF₆) para apagar el arco eléctrico al abrirse.",
                     imagen:
-                        "public/img/IN.5.JPEG"
+                        "public/img/IN.5.jpeg"
                 },
                 {
                     tipo: "Media tensión",
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Solución compacta para maniobra y protección en instalaciones eléctricas de media tensión.",
                     imagen:
-                        "public/img/IN.6.JPEG"
+                        "public/img/IN.6.jpeg"
                 },
                 {
                     tipo: "Media tensión",
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Voltaje: De 1,000 V hasta 35,000 V.",
                     imagen:
-                        "public/img/IN.7.JPEG"
+                        "public/img/IN.7.jpeg"
                 },
                 {
                     tipo: "Media tensión",
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Controlan y protegen los circuitos que reparten la electricidad desde las subestaciones hacia las zonas de consumo. .",
                     imagen:
-                        "public/img/IN.8.JPEG"
+                        "public/img/IN.8.jpeg"
                 }
             ]
         },
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Voltaje: Mayor a 35,000 V (frecuentemente desde 72.5 kV hasta cientos de kV).",
                     imagen:
-                        "public/img/IN.9.JPEG"
+                        "public/img/IN.9.jpeg"
                 },
                 {
                     tipo: "Alta tensión",
@@ -454,7 +454,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Uso: Líneas de transmisión masiva y grandes subestaciones de potencia.",
                     imagen:
-                        "public/img/IN.10.JPEG"
+                        "public/img/IN.10.jpeg"
                 },
                 {
                     tipo: "Interruptores de tanque vivo (Live Tank). ",
@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Diseño: Equipos muy robustos que usan gas SF₆ o sistemas de aceite para evitar daños graves por arcos eléctricos potentes",
                     imagen:
-                        "public/img/IN.11.JPEG"
+                        "public/img/IN.11.jpeg"
                 }
             ]
         },

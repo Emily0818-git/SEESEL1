@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Suministran una potencia reactiva constante. Se conectan de forma manual o fija en redes con cargas estables y previsibles (como un motor grande que opera siempre el mismo tiempo)",
                     imagen:
-                        "public/img/B.1.JPEG"
+                        "public/img/B.1.jpeg"
                 },
                 {
                     tipo: "Banco automático",
@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Usan un controlador inteligente para conectar o desconectar escalones de capacitores según la demanda de energía reactiva en tiempo real. Son ideales para industrias con cargas variables.",
                     imagen:
-                        "public/img/B.2.JPEG"
+                        "public/img/B.2.jpeg"
                 }
                
             ]
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Bastidores trifásicos instalados en la vía pública o redes aéreas de distribución.",
                     imagen:
-                        "public/img/B.3.JPEG"
+                        "public/img/B.3.jpeg"
                 },
                 {
                     tipo: "Según el Lugar de Instalación",
@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Banco de capacitores tipo subestacion en gabinete de media tension de 9MVAR 23KV",
                     imagen:
-                        "public/img/B.4.JPEG"
+                        "public/img/B.4.jpeg"
                 },
                 {
                     tipo: "Banco fijo",
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Unidades sobre remolques para soporte temporal o emergencias en redes eléctricas.",
                     imagen:
-                        "public/img/B.5.JPEG"
+                        "public/img/B.5.jpeg"
                 }
             ]
         },
@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Incluyen reactancias para evitar la resonancia y proteger la red contra corrientes armónicas.",
                     imagen:
-                        "public/img/B.6.JPEG"
+                        "public/img/B.6.jpeg"
                 },
                 {
                     tipo: "Según Aplicaciones Especiales",
@@ -425,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     descripcion:
                         "Diseñados con arreglos complejos para subestaciones de transmisión eléctrica.",
                     imagen:
-                        "public/img/B.7.JPEG"
+                        "public/img/B.7.jpeg"
                 }
                 
             ]
