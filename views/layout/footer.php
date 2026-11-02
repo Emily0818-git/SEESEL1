@@ -119,7 +119,7 @@
                         Pruebas eléctricas
                     </a>
 
-                    <a href="public/img/CV SEESEL.pdf"
+                    <a href="public/img/CV2.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
                         <i class="fa-solid fa-chevron-right"></i>
@@ -128,7 +128,7 @@
 
                     
 
-                    <a href="public/img/Directorio de Contactos.pdf"
+                    <a href="public/img/DC2.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
                         <i class="fa-solid fa-chevron-right"></i>
