@@ -77,7 +77,7 @@
 
                 <div class="identidad-foto">
                     <img
-                        src="public/img/99.JPG"
+                        src="public/img/nosotros1.png"
                         alt="Técnico SEESEL trabajando en instalación eléctrica"
                     >
                 </div>
@@ -680,7 +680,7 @@
             <div class="equipo-imagen reveal-right">
 
                 <img
-                    src="public/img/1.1.1.jpeg"
+                    src="public/img/nosotros2.png"
                     alt="Equipo de colaboradores SEESEL"
                 >
 

@@ -476,7 +476,7 @@
         <div class="seesel-rh-imagen">
 
             <img
-                src="public/img/105.JPG"
+                src="public/img/nosotros3.png"
                 alt="Únete al equipo SEESEL"
             >
 
